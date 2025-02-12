@@ -43,12 +43,12 @@ function App() {
         kontroll: {
           title: 'Desarrollador Front End - Kontroll',
           date: 'Septiembre 2024 - Actualidad',
-          description: 'Desarrollo web con Vue.js y Pinia, mantenimiento y desarrollo de nuevas funcionalidades. Implementación de herramientas de IA para optimizar el desarrollo. Especialización en digitalización y optimización de cadenas de suministro para empresas import/export.'
+          description: 'Como desarrollador front-end en Kontroll, trabajo en el desarrollo web utilizando Vue.js y Pinia para mantener las funcionalidades de la aplicacion ademas de desarrollar nuevas funcionalidades desde el lado del Front End utilizando herramientas de inteligencia artificial para un desarrollo mas eficiente. Esta es  una empresa dedicada a digitalizar y optimizar la cadena de suministro de empresas importadoras y exportadoras utilizando inteligencia artificial.'
         },
         cooweb: {
           title: 'Desarrollador Front End - CooWeb',
           date: 'Diciembre 2023 - Septiembre 2024',
-          description: 'Desarrollo de interfaces intuitivas utilizando Vue.js y Pinia. Mantenimiento y desarrollo de nuevas funcionalidades para productos digitales y transformaciones digitales empresariales.'
+          description: 'Desarrollo de interfaces intuitivas utilizando Vue.js y Pinia. Mantenimiento y desarrollo de nuevas funcionalidades para productos digitales y transformaciones digitales empresariales.Como desarrollador front-end en CooWeb, trabaje en el desarrollo web utilizando Vue.js y Pinia para creación de interfaces intuitivas ademas del mantenimiento y el desarrollo de nuevas funcionalidades. CooWeb es una empresa que se encarga de crear productos digitales y realizar transformaciones digitales para empresas nuevas y establecidas en su nicho de mercado.'
         }
       },
       educationExperience: {
@@ -111,12 +111,12 @@ function App() {
         kontroll: {
           title: 'Front End Developer - Kontroll',
           date: 'September 2024 - Present',
-          description: 'Web development with Vue.js and Pinia, maintenance and development of new features. Implementation of AI tools to optimize development. Specialization in digitalization and optimization of supply chains for import/export companies.'
+          description: 'As a front-end developer at Kontroll, I work on web development using Vue.js and Pinia to maintain the functionalities of the application in addition to developing new functionalities from the Front End side using artificial intelligence tools for more efficient development. This is a company dedicated to digitizing and optimizing the supply chain of importing and exporting companies using artificial intelligence.'
         },
         cooweb: {
           title: 'Front End Developer - CooWeb',
           date: 'December 2023 - September 2024',
-          description: 'Development of intuitive interfaces using Vue.js and Pinia. Maintenance and development of new features for digital products and business digital transformations.'
+          description: 'Development of intuitive interfaces using Vue.js and Pinia. Maintenance and development of new functionalities for digital products and business digital transformations. As a front-end developer at CooWeb, I worked on web development using Vue.js and Pinia to create intuitive interfaces in addition to the maintenance and development of new functionalities. CooWeb is a company that is responsible for creating digital products and carrying out digital transformations for new and established companies in their market niche.'
         }
       },
       educationExperience: {
