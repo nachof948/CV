@@ -246,189 +246,215 @@ function App() {
         </header>
 
         <main className="max-w-5xl mx-auto space-y-12">
-        <section className={`transform transition-all duration-300 ${
+          {/* Sobre Mí */}
+          <section className={`relative overflow-hidden backdrop-blur-md ${
             isDarkMode 
-              ? 'bg-gray-800/30 backdrop-blur-sm shadow-blue-500/10' 
-              : 'bg-white/70 backdrop-blur-sm shadow-blue-500/5'
-          } rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-1`}>
-            <h2 className="text-3xl font-bold mb-8 flex items-center gap-3">
-              <Sparkles className={`transition-colors duration-300 ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`} />
-              {t.aboutMe}
-            </h2>
-            <p className={`leading-relaxed text-lg transition-colors duration-300 ${
-              isDarkMode ? 'text-gray-300' : 'text-gray-600'
-            }`}>
-              {t.aboutMeText}
-            </p>
-          </section>
-          {/* Technologies Section */}
-          <section className={`transform transition-all duration-300 ${
-            isDarkMode 
-              ? 'bg-gray-800/30 backdrop-blur-sm shadow-blue-500/10' 
-              : 'bg-white backdrop-blur-sm shadow-blue-500/5'
-          } rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-1`}>
-            <h2 className="text-3xl font-bold mb-8 flex items-center gap-3">
-              <Code2 className={`transition-colors duration-300 ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`} />
-              {t.technologies}
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {[
-                { name: 'HTML', category: 'Frontend' },
-                { name: 'CSS', category: 'Frontend' },
-                { name: 'JavaScript', category: 'Frontend' },
-                { name: 'React', category: 'Frontend' },
-                { name: 'Vue', category: 'Frontend' },
-                { name: 'TypeScript', category: 'Frontend' },
-                { name: 'Pinia', category: 'State Management' },
-                { name: 'Redux', category: 'State Management' },
-                { name: 'Node.js', category: 'Backend' },
-                { name: 'Express', category: 'Backend' },
-                { name: 'MongoDB', category: 'Database' },
-                { name: 'WindSurf', category: 'AI Tools' },
-
-              ].map((tech) => (
-                <div 
-                  key={tech.name}
-                  className={`group relative overflow-hidden transition-all duration-300 ${
-                    isDarkMode 
-                      ? 'bg-gray-700/30 hover:bg-blue-900/30' 
-                      : 'bg-gray-100/50 hover:bg-blue-100/50'
-                  } backdrop-blur-sm rounded-xl p-4 text-center transform hover:scale-105 hover:shadow-lg`}
-                >
-                  <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300 ${
-                    isDarkMode ? 'bg-blue-400' : 'bg-blue-600'
-                  }`} />
-                  <p className={`font-semibold mb-1 transition-colors duration-300 ${
-                    isDarkMode 
-                      ? 'text-white group-hover:text-blue-400' 
-                      : 'text-gray-900 group-hover:text-blue-600'
-                  }`}>
-                    {tech.name}
-                  </p>
-                  <p className={`text-sm transition-colors duration-300 ${
-                    isDarkMode ? 'text-gray-400' : 'text-gray-600'
-                  }`}>
-                    {t.categories[tech.category as keyof typeof t.categories]}
-                  </p>
-                </div>
-              ))}
+              ? 'bg-gray-800/20 border border-white/10' 
+              : 'bg-white/20 border border-black/5'
+          } rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 group`}>
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="relative z-10">
+              <h2 className="text-3xl font-bold mb-8 flex items-center gap-3">
+                <Sparkles className={`transition-colors duration-300 ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`} />
+                {t.aboutMe}
+              </h2>
+              <p className={`leading-relaxed text-lg transition-colors duration-300 ${
+                isDarkMode ? 'text-gray-300' : 'text-gray-600'
+              }`}>
+                {t.aboutMeText}
+              </p>
             </div>
           </section>
 
-          {/* Soft Skills Section */}
-          <section className={`transform transition-all duration-300 ${
+          {/* Tecnologías */}
+          <section className={`relative overflow-hidden backdrop-blur-md ${
             isDarkMode 
-              ? 'bg-gray-800/30 backdrop-blur-sm shadow-blue-500/10' 
-              : 'bg-white backdrop-blur-sm shadow-blue-500/5'
-          } rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-1`}>
-            <h2 className="text-3xl font-bold mb-8 flex items-center gap-3">
-              <Brain className={`transition-colors duration-300 ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`} />
-              {t.softSkills}
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                { icon: Users, title: t.teamwork, desc: t.teamworkDesc },
-                { icon: Lightbulb, title: t.innovation, desc: t.innovationDesc },
-                { icon: MessageSquare, title: t.communication, desc: t.communicationDesc }
-              ].map(({ icon: Icon, title, desc }) => (
-                <div 
-                  key={title}
-                  className={`group transition-all duration-300 ${
-                    isDarkMode 
-                      ? 'bg-gray-700/30 hover:bg-blue-900/30' 
-                      : 'bg-gray-100/50 hover:bg-blue-100/50'
-                  } backdrop-blur-sm rounded-xl p-6 transform hover:scale-105 hover:shadow-lg`}
-                >
-                  <Icon className={`w-8 h-8 mb-4 transition-colors duration-300 ${
-                    isDarkMode ? 'text-blue-400' : 'text-blue-600'
-                  } group-hover:scale-110 transform transition-transform duration-300`} />
-                  <h3 className="text-xl font-semibold mb-2">{title}</h3>
+              ? 'bg-gray-800/20 border border-white/10' 
+              : 'bg-white/20 border border-black/5'
+          } rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 group`}>
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="relative z-10">
+              <h2 className="text-3xl font-bold mb-8 flex items-center gap-3">
+                <Code2 className={`transition-colors duration-300 ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`} />
+                {t.technologies}
+              </h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {[
+                  { name: 'HTML', category: 'Frontend' },
+                  { name: 'CSS', category: 'Frontend' },
+                  { name: 'JavaScript', category: 'Frontend' },
+                  { name: 'React', category: 'Frontend' },
+                  { name: 'Vue', category: 'Frontend' },
+                  { name: 'TypeScript', category: 'Frontend' },
+                  { name: 'Pinia', category: 'State Management' },
+                  { name: 'Redux', category: 'State Management' },
+                  { name: 'Node.js', category: 'Backend' },
+                  { name: 'Express', category: 'Backend' },
+                  { name: 'MongoDB', category: 'Database' },
+                  { name: 'WindSurf', category: 'AI Tools' },
+                ].map((tech) => (
+                  <div 
+                    key={tech.name}
+                    className={`relative overflow-hidden backdrop-blur-sm ${
+                      isDarkMode 
+                        ? 'bg-gray-800/30 hover:bg-gray-700/30 border border-white/5' 
+                        : 'bg-white/30 hover:bg-white/40 border border-black/5'
+                    } rounded-xl p-4 transition-all duration-300 transform hover:scale-105 hover:shadow-lg group/card`}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover/card:opacity-100 transition-opacity duration-300" />
+                    <div className="relative z-10">
+                      <p className={`font-semibold mb-1 transition-colors duration-300 ${
+                        isDarkMode 
+                          ? 'text-white group-hover/card:text-blue-400' 
+                          : 'text-gray-900 group-hover/card:text-blue-600'
+                      }`}>
+                        {tech.name}
+                      </p>
+                      <p className={`text-sm transition-colors duration-300 ${
+                        isDarkMode ? 'text-gray-400' : 'text-gray-600'
+                      }`}>
+                        {t.categories[tech.category as keyof typeof t.categories]}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Habilidades Blandas */}
+          <section className={`relative overflow-hidden backdrop-blur-md ${
+            isDarkMode 
+              ? 'bg-gray-800/20 border border-white/10' 
+              : 'bg-white/20 border border-black/5'
+          } rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 group`}>
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="relative z-10">
+              <h2 className="text-3xl font-bold mb-8 flex items-center gap-3">
+                <Brain className={`transition-colors duration-300 ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`} />
+                {t.softSkills}
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {[
+                  { icon: Users, title: t.teamwork, desc: t.teamworkDesc },
+                  { icon: Lightbulb, title: t.innovation, desc: t.innovationDesc },
+                  { icon: MessageSquare, title: t.communication, desc: t.communicationDesc }
+                ].map(({ icon: Icon, title, desc }) => (
+                  <div 
+                    key={title}
+                    className={`relative overflow-hidden backdrop-blur-sm ${
+                      isDarkMode 
+                        ? 'bg-gray-800/30 hover:bg-gray-700/30 border border-white/5' 
+                        : 'bg-white/30 hover:bg-white/40 border border-black/5'
+                    } rounded-xl p-6 transition-all duration-300 transform hover:scale-105 hover:shadow-lg group/skill`}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover/skill:opacity-100 transition-opacity duration-300" />
+                    <div className="relative z-10">
+                      <Icon className={`w-8 h-8 mb-4 transition-all duration-300 ${
+                        isDarkMode ? 'text-blue-400' : 'text-blue-600'
+                      } group-hover/skill:scale-110 transform`} />
+                      <h3 className="text-xl font-semibold mb-2">{title}</h3>
+                      <p className={`transition-colors duration-300 ${
+                        isDarkMode ? 'text-gray-300' : 'text-gray-600'
+                      }`}>
+                        {desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Experiencia */}
+          <section className={`relative overflow-hidden backdrop-blur-md ${
+            isDarkMode 
+              ? 'bg-gray-800/20 border border-white/10' 
+              : 'bg-white/20 border border-black/5'
+          } rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 group`}>
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="relative z-10">
+              <h2 className="text-3xl font-bold mb-8 flex items-center gap-3">
+                <Building2 className={`transition-colors duration-300 ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`} />
+                {t.experience}
+              </h2>
+              <div className="space-y-8">
+                <div className={`relative border-l-2 transition-colors duration-300 ${
+                  isDarkMode ? 'border-blue-400' : 'border-blue-600'
+                } pl-6`}>
+                  <div className={`absolute -left-2 top-0 w-4 h-4 rounded-full transition-colors duration-300 ${
+                    isDarkMode ? 'bg-blue-400' : 'bg-blue-600'
+                  }`} />
+                  <div className="flex items-center gap-2 text-blue-400 mb-2">
+                    <Calendar className="w-5 h-5" />
+                    <span className="text-lg">{t.experienceWork.kontroll.date}</span>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2">{t.experienceWork.kontroll.title}</h3>
                   <p className={`transition-colors duration-300 ${
                     isDarkMode ? 'text-gray-300' : 'text-gray-600'
                   }`}>
-                    {desc}
+                    {t.experienceWork.kontroll.description}
                   </p>
                 </div>
-              ))}
-            </div>
-          </section>
 
-          {/* Experience Section */}
-          <section className={`transform transition-all duration-300 ${
-            isDarkMode 
-              ? 'bg-gray-800/30 backdrop-blur-sm shadow-blue-500/10' 
-              : 'bg-white backdrop-blur-sm shadow-blue-500/5'
-          } rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-1`}>
-            <h2 className="text-3xl font-bold mb-8 flex items-center gap-3">
-              <Building2 className={`transition-colors duration-300 ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`} />
-              {t.experience}
-            </h2>
-            
-            <div className="space-y-8">
-              <div className={`relative border-l-2 transition-colors duration-300 ${
-                isDarkMode ? 'border-blue-400' : 'border-blue-600'
-              } pl-6`}>
-                <div className={`absolute -left-2 top-0 w-4 h-4 rounded-full transition-colors duration-300 ${
-                  isDarkMode ? 'bg-blue-400' : 'bg-blue-600'
-                }`} />
-                <div className="flex items-center gap-2 text-blue-400 mb-2">
-                  <Calendar className="w-5 h-5" />
-                  <span className="text-lg">{t.experienceWork.kontroll.date}</span>
+                <div className={`relative border-l-2 transition-colors duration-300 ${
+                  isDarkMode ? 'border-blue-400' : 'border-blue-600'
+                } pl-6`}>
+                  <div className={`absolute -left-2 top-0 w-4 h-4 rounded-full transition-colors duration-300 ${
+                    isDarkMode ? 'bg-blue-400' : 'bg-blue-600'
+                  }`} />
+                  <div className="flex items-center gap-2 text-blue-400 mb-2">
+                    <Calendar className="w-5 h-5" />
+                    <span className="text-lg">{t.experienceWork.cooweb.date}</span>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2">{t.experienceWork.cooweb.title}</h3>
+                  <p className={`transition-colors duration-300 ${
+                    isDarkMode ? 'text-gray-300' : 'text-gray-600'
+                  }`}>
+                    {t.experienceWork.cooweb.description}
+                  </p>
                 </div>
-                <h3 className="text-2xl font-bold mb-2">{t.experienceWork.kontroll.title}</h3>
-                <p className={`transition-colors duration-300 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                  {t.experienceWork.kontroll.description}
-                </p>
-              </div>
-
-              <div className={`relative border-l-2 transition-colors duration-300 ${
-                isDarkMode ? 'border-blue-400' : 'border-blue-600'
-              } pl-6`}>
-                <div className={`absolute -left-2 top-0 w-4 h-4 rounded-full transition-colors duration-300 ${
-                  isDarkMode ? 'bg-blue-400' : 'bg-blue-600'
-                }`} />
-                <div className="flex items-center gap-2 text-blue-400 mb-2">
-                  <Calendar className="w-5 h-5" />
-                  <span className="text-lg">{t.experienceWork.cooweb.date}</span>
-                </div>
-                <h3 className="text-2xl font-bold mb-2">{t.experienceWork.cooweb.title}</h3>
-                <p className={`transition-colors duration-300 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                  {t.experienceWork.cooweb.description}
-                </p>
               </div>
             </div>
           </section>
 
-          {/* Education Section */}
-          <section className={`transform transition-all duration-300 ${
+          {/* Educación */}
+          <section className={`relative overflow-hidden backdrop-blur-md ${
             isDarkMode 
-              ? 'bg-gray-800/30 backdrop-blur-sm shadow-blue-500/10' 
-              : 'bg-white/70 backdrop-blur-sm shadow-blue-500/5'
-          } rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-1`}>
-            <h2 className="text-3xl font-bold mb-8 flex items-center gap-3">
-              <GraduationCap className={`transition-colors duration-300 ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`} />
-              {t.education}
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {Object.values(t.educationExperience).map((edu, index) => (
-                <div key={index} className={`p-4 rounded-lg transition-all duration-300 ${
-                  isDarkMode 
-                    ? 'bg-gray-800/50 hover:bg-gray-700/50' 
-                    : 'bg-white hover:bg-gray-50'
-                } shadow-md hover:shadow-lg`}>
-                  <h3 className="text-xl font-semibold mb-2">{edu.title}</h3>
-                  <p className={`text-sm mb-1 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                    {edu.institution}
-                  </p>
-                  <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
-                    {edu.year}
-                  </p>
-                </div>
-              ))}
+              ? 'bg-gray-800/20 border border-white/10' 
+              : 'bg-white/20 border border-black/5'
+          } rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 group`}>
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="relative z-10">
+              <h2 className="text-3xl font-bold mb-8 flex items-center gap-3">
+                <GraduationCap className={`transition-colors duration-300 ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`} />
+                {t.education}
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {Object.values(t.educationExperience).map((edu, index) => (
+                  <div 
+                    key={index}
+                    className={`relative overflow-hidden backdrop-blur-sm ${
+                      isDarkMode 
+                        ? 'bg-gray-800/30 hover:bg-gray-700/30 border border-white/5' 
+                        : 'bg-white/30 hover:bg-white/40 border border-black/5'
+                    } rounded-xl p-6 transition-all duration-300 transform hover:scale-105 hover:shadow-lg group/edu`}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 opacity-0 group-hover/edu:opacity-100 transition-opacity duration-300" />
+                    <div className="relative z-10">
+                      <h3 className="text-xl font-semibold mb-2">{edu.title}</h3>
+                      <p className={`text-sm mb-1 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                        {edu.institution}
+                      </p>
+                      <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+                        {edu.year}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </section>
-         
         </main>
       </div>
     </div>
