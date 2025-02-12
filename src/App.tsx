@@ -226,6 +226,7 @@ function App() {
                   key={label}
                   href={href}
                   aria-label={label}
+                  target='_blank'
                   className={`group relative transition-all duration-300 transform hover:scale-110 ${
                     isDarkMode ? 'hover:text-blue-400' : 'hover:text-blue-600'
                   }`}
