@@ -47,7 +47,7 @@ function App() {
         },
         cooweb: {
           title: 'Desarrollador Front End - CooWeb',
-          date: 'Diciembre 2023 - Septiembre 2024',
+          date: 'Diciembre 2023 - Actualidad',
           description: 'Desarrollo de interfaces intuitivas utilizando Vue.js y Pinia. Mantenimiento y desarrollo de nuevas funcionalidades para productos digitales y transformaciones digitales empresariales.Como desarrollador front-end en CooWeb, trabaje en el desarrollo web utilizando Vue.js y Pinia para creación de interfaces intuitivas ademas del mantenimiento y el desarrollo de nuevas funcionalidades. CooWeb es una empresa que se encarga de crear productos digitales y realizar transformaciones digitales para empresas nuevas y establecidas en su nicho de mercado.'
         }
       },
@@ -115,7 +115,7 @@ function App() {
         },
         cooweb: {
           title: 'Front End Developer - CooWeb',
-          date: 'December 2023 - September 2024',
+          date: 'December 2023 - Present',
           description: 'Development of intuitive interfaces using Vue.js and Pinia. Maintenance and development of new functionalities for digital products and business digital transformations. As a front-end developer at CooWeb, I worked on web development using Vue.js and Pinia to create intuitive interfaces in addition to the maintenance and development of new functionalities. CooWeb is a company that is responsible for creating digital products and carrying out digital transformations for new and established companies in their market niche.'
         }
       },
